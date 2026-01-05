@@ -23,6 +23,7 @@ typedef unsigned long long u64;
 
 void setup() {
 	Serial.begin(115200);
+	Serial.ignoreFlowControl(true);
 		u8 pins[4] = {PIN_MOTOR_0, PIN_MOTOR_1, PIN_MOTOR_2, PIN_MOTOR_3};
 		beginPassthrough(pins, 4);
 		while (processPassthrough()) {
